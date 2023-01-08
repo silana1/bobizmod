@@ -3,7 +3,7 @@ if (!db.data.chats[m.chat].audios && m.isGroup) throw 0
 let vn = 'toma.mp3'
 conn.sendPresenceUpdate('recording', m.chat)
 conn.sendMessage(m.chat, { audio: { url: vn }, seconds: '1934.4', ptt: true, mimetype: 'audio/mpeg', fileName: `toma.mp3` }, { quoted: m })}
-handler.customPrefix = /ª|salam|menu|a|A/
+handler.customPrefix = /ª|salam|menu|apk|a|A/
 handler.command = /^(a|salam|ª|A?$)/
 export default handler
 
