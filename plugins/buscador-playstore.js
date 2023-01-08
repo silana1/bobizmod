@@ -1,6 +1,6 @@
 import fetch from 'node-fetch'
 let handler = async (m, { conn, text, args }) => {
-if (!args[0]) throw `*[❗] 𝙸𝙽𝙶𝚁𝙴𝙴𝚂𝙴 𝙴𝙻 𝙽𝙾𝙼𝙱𝚁𝙴 𝙳𝙴 𝙻𝙰 𝙰𝙿𝙺 𝚀𝚄𝙴 𝚀𝚄𝙸𝙴𝚁𝙰 𝙱𝚄𝚂𝙲𝙰𝚁*`
+if (!args[0]) throw `البحث في متجر غوغل \n مثال \n *.playstore facebook*`
 try {
 let enc = encodeURIComponent(text)
 let json = await fetch(`https://latam-api.vercel.app/api/playstore?apikey=brunosobrino&q=${enc}`)
@@ -9,18 +9,18 @@ let lol = await fetch(`https://api.lolhuman.xyz/api/translate/auto/es?apikey=85f
 let loll = await lol.json()
 let mystic = loll.result.translated
 if (!gPlay.titulo) return m.reply(`[ ! ] Sin resultados`)
-conn.sendMessage(m.chat,{image:{url: gPlay.imagen},caption:`🔍 Resultado: ${gPlay.titulo}
+conn.sendMessage(m.chat,{image:{url: gPlay.imagen},caption:`🔍 Resultad: ${gPlay.titulo}
 🧬 Identificador: ${gPlay.id}
 ⛓️ Link: ${gPlay.link}
-🖼️ Imagen: ${gPlay.imagen}
-✍️ Desarrollador: ${gPlay.desarrollador}
+🖼️ Image: ${gPlay.imagen}
+✍️ description: ${gPlay.desarrollador}
 📜 Descripcion: ${mystic}
 💲 Moneda: ${gPlay.moneda}
-🎭 Gratis?: ${gPlay.gratis}
-💸 Precio: ${gPlay.precio}
+🎭 Gratuit?: ${gPlay.gratis}
+💸 Pr: ${gPlay.precio}
 📈 Puntuacion: ${gPlay.puntuacion}`},{quoted:m})
 } catch {
-await m.reply('*[❗𝐈𝐍𝐅𝐎❗] 𝙴𝚁𝚁𝙾𝚁, 𝙿𝙾𝚁 𝙵𝙰𝚅𝙾𝚁 𝚅𝚄𝙴𝙻𝚅𝙰 𝙰 𝙸𝙽𝚃𝙴𝙽𝚃𝙰𝚁𝙻𝙾*')    
+await m.reply('*البحث في بلاي ستور *')    
 }}
 handler.help = ['playstore <aplicacion>']
 handler.tags = ['internet']
