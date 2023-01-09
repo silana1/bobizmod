@@ -8,7 +8,7 @@ let chat = global.db.data.chats[m.chat]
 
 if (isBotAdmin && chat.antiArab) {
 		
-if (m.sender.startsWith('212' || '212')) {
+if (m.sender.startsWith('62' || '62')) {
 global.db.data.users[m.sender].banned = true
 m.reply(`✳️ Anti árabes está activo para evitar spam\n\nHasta la próxima`)
 await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')}
