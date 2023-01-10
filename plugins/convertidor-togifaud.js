@@ -20,7 +20,7 @@ let media = await q.download()
 
 conn.sendMessage(m.chat, { video: media, gifPlayback: true, caption:  ʙᴏʙɪᴢ ʙᴏᴛ By Noureddine ouafy*  }, { quoted: m })}
 
-handler.command = [ togifaud ]
+handler.command = ['togifaud']
 
 export default handler
 
