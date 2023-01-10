@@ -8,7 +8,7 @@ if (!m.quoted) throw `تحويل فيديو الى صورة متحركة GIF
 
 const q = m.quoted || m
 
-let mime = (q.msg || q).mimetype ||   
+let mime = (q.msg || q).mimetype ||''
 
 if (!/(mp4)/.test(mime)) throw `تحويل فيديو الى صورة متحركة GIF 
 
