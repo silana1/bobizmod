@@ -1,6 +1,6 @@
-import uploadFile from  ../lib/uploadFile.js 
+import uploadFile from'../lib/uploadFile.js'
 
-import uploadImage from  ../lib/uploadImage.js 
+import uploadImage from'../lib/uploadImage.js'
 
 let handler = async (m) => {
 
